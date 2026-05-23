@@ -6,8 +6,7 @@ authors:
     given-names: "Geonwoo"
 date-released: "2026-02-28"
 license: "MIT"
-# After creating a public GitHub release and Zenodo archive, add:
-# repository-code: "https://github.com/<owner>/<repo>"
-# identifiers:
-#   - type: doi
-#     value: "10.5281/zenodo.<record>"
+version: "1.0.0"
+doi: "10.5281/zenodo.20350296"
+repository-code: "https://github.com/1004-k/tte-dr"
+url: "https://github.com/1004-k/tte-dr/releases/tag/v1.0.0"
