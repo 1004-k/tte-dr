@@ -94,15 +94,15 @@ future.apply
 
 Each run writes session information and metadata to the output directory for audit.
 
-## Archiving before journal submission
+## Archived release and citation
 
-Before submitting the manuscript, create a public GitHub release and archive the release on Zenodo. Then update the manuscript key resources table, reference list, and `CITATION.cff` with:
+The manuscript submission version is archived as GitHub release `v1.0.0` and preserved on Zenodo.
 
-```text
-GitHub release URL
-release commit hash
-Zenodo DOI
-```
+- GitHub release: https://github.com/1004-k/tte-dr/releases/tag/v1.0.0
+- Zenodo version DOI: https://doi.org/10.5281/zenodo.20350296
+- Zenodo all-version DOI: https://doi.org/10.5281/zenodo.20350295
+
+Please cite the archived release and the associated manuscript when using this code.
 
 ## License
 
