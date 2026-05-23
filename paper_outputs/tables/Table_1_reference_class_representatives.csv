@@ -1,0 +1,11 @@
+failure_mode,scenario_id,fixed_anchor
+A1_baseline_none,S01,True
+B1_threshold_jump,S04,True
+B2_monotone_increasing,S07,True
+B3_late_surge,S18,False
+B4_feedback_loop,S12,False
+B5_early_frailty_dropout,S15,False
+C1_lower_overlap,S14,False
+C2_strongest_observed_overlap_stress,S13,False
+D1_specification_instability,S10,False
+D2_sensitivity_no_tipping,S09,False

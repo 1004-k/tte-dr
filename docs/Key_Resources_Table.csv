@@ -1,0 +1,7 @@
+Reagent or resource,Source,Identifier
+Software algorithm,R Project,"R >= 4.2.2; tested with R 4.5.2"
+Software algorithm,R package data.table,https://CRAN.R-project.org/package=data.table
+Software algorithm,R package survival,https://CRAN.R-project.org/package=survival
+Software algorithm,"R packages future, future.apply","https://CRAN.R-project.org/package=future; https://CRAN.R-project.org/package=future.apply"
+Deposited data and code,GitHub,Public release URL and commit hash to be inserted before submission
+Deposited data and code,Zenodo,DOI to be inserted before submission

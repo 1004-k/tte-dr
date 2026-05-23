@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the archived software release and the associated manuscript."
+title: "TTE-DR: target trial emulation diagnostic report generator"
+authors:
+  - family-names: "Kim"
+    given-names: "Geonwoo"
+date-released: "2026-02-28"
+license: "MIT"
+# After creating a public GitHub release and Zenodo archive, add:
+# repository-code: "https://github.com/<owner>/<repo>"
+# identifiers:
+#   - type: doi
+#     value: "10.5281/zenodo.<record>"

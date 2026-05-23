@@ -1,0 +1,19 @@
+scenario_id,max_abs_spd_median,end_pressure_median,min_ress_median,max_tail_share_median,logrr_range_median,direction_note,delta_star,grade,dominant_flags
+S01,0.11,0.07,0.879,0.023,0.099,direction change noted,>2.0 (no tipping within evaluated range),Green,none
+S02,0.116,0.072,0.883,0.023,0.1,direction change noted,>2.0 (no tipping within evaluated range),Green,none
+S03,0.111,0.068,0.885,0.023,0.094,direction change noted,>2.0 (no tipping within evaluated range),Green,none
+S04,0.188,0.548,0.931,0.023,0.111,direction change noted,>2.0 (no tipping within evaluated range),Green,none
+S05,0.273,0.961,0.93,0.023,0.099,direction change noted,>2.0 (no tipping within evaluated range),Green,none
+S06,0.353,1.357,0.932,0.023,0.118,direction change noted,>2.0 (no tipping within evaluated range),Amber,specification_instability
+S07,0.319,0.866,0.906,0.023,0.1,direction change noted,>2.0 (no tipping within evaluated range),Green,none
+S08,0.539,1.522,0.906,0.023,0.092,direction change noted,>2.0 (no tipping within evaluated range),Green,none
+S09,0.777,2.234,0.902,0.023,0.089,direction change noted,>2.0 (no tipping within evaluated range),Green,none
+S10,0.369,1.246,0.939,0.024,0.124,direction change noted,>2.0 (no tipping within evaluated range),Red,specification_instability; extreme_signal
+S11,0.649,2.291,0.936,0.025,0.113,direction change noted,>2.0 (no tipping within evaluated range),Green,none
+S12,0.944,3.389,0.945,0.024,0.111,direction change noted,>2.0 (no tipping within evaluated range),Red,high_pressure; high_cumulative_pressure; extreme_signal
+S13,0.311,0.494,0.843,0.027,0.11,direction change noted,>2.0 (no tipping within evaluated range),Green,none
+S14,0.54,0.872,0.851,0.027,0.112,direction change noted,>2.0 (no tipping within evaluated range),Green,none
+S15,0.804,1.302,0.854,0.026,0.107,direction change noted,>2.0 (no tipping within evaluated range),Green,none
+S16,0.338,0.872,0.901,0.028,0.107,direction change noted,>2.0 (no tipping within evaluated range),Green,none
+S17,0.61,1.653,0.911,0.026,0.113,direction change noted,>2.0 (no tipping within evaluated range),Green,none
+S18,0.951,2.452,0.903,0.027,0.106,direction change noted,>2.0 (no tipping within evaluated range),Red,high_pressure; high_cumulative_pressure; extreme_signal
