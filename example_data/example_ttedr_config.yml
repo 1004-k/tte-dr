@@ -1,5 +1,5 @@
 study_id: example_S18
-software_release: v1.0.0
+software_release: v1.0.3
 estimand: per-protocol contrast for sustained adherence
 follow_up_days: 365
 strategy_contrast: sustained treatment strategy versus comparator
