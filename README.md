@@ -72,15 +72,15 @@ TTE-DR writes both human-readable and machine-readable outputs. The one-page sna
 
 The current release is a prototype focused on inverse-probability-of-censoring-weighted per-protocol target trial emulation. TTE-DR does not determine whether a study is causally valid. It provides structured diagnostic reporting and prompts for follow-up analyses.
 
-## Archived release and citation
+## Citation
 
-The SoftwareX submission version is archived as GitHub release `v1.0.0` and preserved on Zenodo.
+If you use TTE-DR, please cite the archived Zenodo software release and the associated manuscript.
 
-- GitHub release: https://github.com/1004-k/tte-dr/releases/tag/v1.0.0
-- Zenodo version DOI: https://doi.org/10.5281/zenodo.20350296
-- Zenodo all-version DOI: https://doi.org/10.5281/zenodo.20350295
+The all-version Zenodo DOI is:
 
-Please cite the archived release and the associated manuscript when using this code.
+https://doi.org/10.5281/zenodo.20350295
+
+For exact reproducibility, cite the specific version used in your analysis. Version-specific DOIs are listed on the Zenodo record.
 
 ## License
 
