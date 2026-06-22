@@ -1,0 +1,1 @@
+The TTE-DR example report was graded Red because protocol deviation appeared prognosis-dependent over follow-up. Dominant flags: high_pressure, high_cum_pressure, extreme_signal. The per-protocol estimate should be accompanied by time-resolved diagnostics, the full specification-stability table, and residual-sensitivity reporting.

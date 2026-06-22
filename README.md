@@ -1,102 +1,80 @@
 # TTE-DR: target trial emulation diagnostic report generator
 
-This repository contains the simulation and reporting code for TTE-DR, a standardized quality-assurance diagnostic report for per-protocol target trial emulation in observational studies.
+TTE-DR is an R-based diagnostic quality-assurance reporting workflow for per-protocol target trial emulation in observational studies. It is not a new causal estimator. It takes diagnostic outputs from a per-protocol analysis and generates a reproducible report: graded summaries, named flags, a one-page diagnostic snapshot, machine-readable CSV tables, templated interpretation text, and run metadata.
 
-TTE-DR is designed as a reporting resource rather than a new causal estimator. It organizes diagnostic evidence into four modules:
+## What problem does TTE-DR solve?
 
-1. Pressure: time-varying selection pressure, SPD(t)
-2. Positivity: relative effective sample size and upper-tail weight concentration
-3. Stability: sensitivity across a pre-specified set of reasonable specifications
-4. Sensitivity: residual tipping summary, delta*
+Per-protocol target trial emulations often report diagnostics as study-specific plots, isolated weight summaries, or informal sensitivity checks. This makes it difficult to compare analyses, audit updates, or decide which additional checks are needed when protocol deviation is prognosis-dependent, overlap erodes, or estimates change across reasonable specifications. TTE-DR standardizes the reporting workflow without replacing scientific judgement.
 
-The generator produces calibrated grades, dominant flags, continuous diagnostics, a one-page diagnostic snapshot, manuscript-ready figures/tables, and run metadata for audit.
-
-## Repository layout
-
-```text
-R/                 Core simulation, diagnostic, grading, and reporting functions
-scripts/           Reproducible pipelines and figure/table builders
-docs/              STAR Methods skeleton, submission checklist, and run notes
-paper_outputs/     Versioned outputs used for the manuscript
-  figures/         Figure 1-3, Figure S1, and graphical abstract
-  tables/          Table 1, Table 2, and Table S1
-  report/          Curated diagnostic snapshot and short report summary
-```
-
-## Quick start
+## Quick start for reviewers
 
 From the repository root:
+
+```bash
+Rscript scripts/run_ttedr_example.R
+Rscript tests/smoke_test.R
+```
+
+The example run uses synthetic diagnostic inputs in `example_data/` and writes outputs to `example_output/`:
+
+- `TTE_DR_snapshot_example.pdf`
+- `diagnostic_summary.csv`
+- `flags.csv`
+- `interpretation_text.txt`
+- `run_metadata.json`
+
+The smoke test checks that the example command runs and that the expected files are created. It is intentionally dependency-light so that reviewers can validate the public interface quickly.
+
+## Full reproducibility run
+
+The full manuscript run is intended for a multi-core machine or cloud instance. If the full-run scripts from the main repository are present, run:
 
 ```bash
 Rscript scripts/00_install_deps.R
 bash scripts/98_quickcheck.sh
 ```
 
-The quickcheck run uses a small subset of scenarios and writes output to `quickcheck_paperx/`.
+The full reference-class run used for manuscript figures and tables is computationally heavier than the smoke test. Curated manuscript outputs are provided in `paper_outputs/` or in the SoftwareX submission package.
 
-## Full reproducibility run
-
-The full manuscript run is intended for a multi-core machine or cloud instance.
-
-```bash
-chmod +x scripts/99_run_paperx_tmux_gcp.sh
-bash scripts/99_run_paperx_tmux_gcp.sh
-
-tmux ls
-tail -f output_paperx_main/run.log
-```
-
-Default full-run settings:
+## Repository structure
 
 ```text
-B = 200 Monte Carlo replicates
-N = 2,000 simulated individuals per replicate
-18 reference-class scenarios
-truth levels: causal_null by default
-nuisance-model levels: well specified and misspecified
+R/                         Core simulation, diagnostic, grading, and reporting functions
+scripts/                   Example, quickcheck, and full reproducibility scripts
+tests/                     Smoke test for SoftwareX review
+example_data/              Synthetic diagnostic inputs for a one-command demo
+example_output/            Expected outputs from the demo run
+docs/                      Quick start, input schema, and failure-mode catalogue
+rules/                     Default rule files and interpretation templates
+paper_outputs/             Manuscript figures and tables, if present
+src/README.md              Notes on source-code layout for SoftwareX
+.github/workflows/         Optional GitHub Actions smoke-test workflow
+LICENSE.txt or LICENSE     MIT license text
+CITATION.cff               Software citation metadata
+DESCRIPTION                R project metadata
+README.md                  User-facing quick start and documentation
 ```
 
-## Main output files
+## Required inputs
 
-After a full run, the manuscript-facing files are written under `output_paperx_main/figures/` and `output_paperx_main/tables/`.
+TTE-DR expects two classes of inputs:
 
-Recommended clean submission names are:
+1. **Target-trial metadata**: study identifier, estimand, strategy contrast, follow-up horizon, protocol-deviation definition, analysis date, and software release.
+2. **Diagnostic inputs**: a time-resolved selection-pressure curve, positivity and weight-stability summaries, estimates from pre-specified reasonable alternatives, and residual-sensitivity outputs.
 
-```text
-Figure_1_TTEDR_grade_heatmap.pdf
-Figure_2_reference_class_representatives.pdf
-Figure_3_TTEDR_diagnostic_snapshot.pdf
-Figure_S1_cutoff_sensitivity.pdf
-Graphical_Abstract_TTEDR.pdf
-Graphical_Abstract_TTEDR.png
-Table_1_reference_class_representatives.csv
-Table_2_canonical_slice_summary.csv
-Table_S1_full_TTEDR_summary.csv
-```
+See `docs/input_schema.md` for the suggested minimal input schema.
 
-A curated copy of these outputs is provided in `paper_outputs/`.
+## Outputs
 
-## Grading and informational notes
+TTE-DR writes both human-readable and machine-readable outputs. The one-page snapshot supports rapid inspection, while CSV tables and metadata files support audit, reproducibility, continuous integration, and manuscript reporting.
 
-TTE-DR separates dominant grading flags from informational notes. Direction changes around the causal null are recorded as informational notes, not automatic warning flags. Residual sensitivity values shown as `>2.0` indicate no tipping within the evaluated range (`delta_max = 2.0`).
+## Scope
 
-## Environment
-
-The code depends on R and common CRAN packages:
-
-```text
-R >= 4.2.2
-data.table
-survival
-future
-future.apply
-```
-
-Each run writes session information and metadata to the output directory for audit.
+The current release is a prototype focused on inverse-probability-of-censoring-weighted per-protocol target trial emulation. TTE-DR does not determine whether a study is causally valid. It provides structured diagnostic reporting and prompts for follow-up analyses.
 
 ## Archived release and citation
 
-The manuscript submission version is archived as GitHub release `v1.0.0` and preserved on Zenodo.
+The SoftwareX submission version is archived as GitHub release `v1.0.0` and preserved on Zenodo.
 
 - GitHub release: https://github.com/1004-k/tte-dr/releases/tag/v1.0.0
 - Zenodo version DOI: https://doi.org/10.5281/zenodo.20350296
@@ -106,4 +84,4 @@ Please cite the archived release and the associated manuscript when using this c
 
 ## License
 
-MIT License.
+MIT License. The license applies to the source code, scripts, and documentation in this repository unless otherwise stated.

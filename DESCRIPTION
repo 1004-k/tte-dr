@@ -1,10 +1,11 @@
 Package: ttedr
 Title: Target Trial Emulation Diagnostic Report Generator
-Version: 0.1.0
+Version: 1.0.0
 Authors@R: person("Geonwoo", "Kim", email = "geon.woo.kim@stud.ki.se", role = c("aut", "cre"))
-Description: Simulation and reporting code for a standardized diagnostic quality-assurance report for per-protocol target trial emulation.
-License: MIT
+Description: Generates diagnostic quality-assurance reports for per-protocol target trial emulation workflows using synthetic examples and manuscript-facing reporting rules.
+License: MIT + file LICENSE
 Encoding: UTF-8
-Roxygen: list(markdown = TRUE)
 Depends: R (>= 4.2.2)
 Imports: data.table, survival, future, future.apply
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2

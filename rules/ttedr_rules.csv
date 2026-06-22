@@ -1,0 +1,6 @@
+rule_id,module,condition,grade,flag,interpretation_template
+pressure_red,pressure,max_abs_spd >= 0.80 or end_pressure >= 2.00,Red,high_pressure,Protocol deviation appears strongly prognosis-dependent; report time-resolved pressure and residual sensitivity.
+pressure_amber,pressure,max_abs_spd >= 0.50,Amber,moderate_pressure,Protocol deviation shows moderate prognosis dependence; check timing and robustness.
+positivity_red,positivity,min_rESS < 0.70 or max_tail_share >= 0.10,Red,positivity_stress,Weight diagnostics indicate limited support; inspect weight tails and consider support restriction.
+stability_red,stability,direction_reversal == TRUE or estimate_range >= 0.25,Red,specification_instability,The conclusion changes across reasonable specifications; report the full alternative set.
+sensitivity_red,sensitivity,delta_star <= 0.50,Red,sensitivity_tipping,The primary interpretation tips under a small residual-bias multiplier.

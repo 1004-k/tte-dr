@@ -1,0 +1,5 @@
+scenario_id,specification_id,log_hr,se,note
+S18,primary,0.0,0.08,primary null example
+S18,shorter_horizon,0.04,0.09,reasonable alternative
+S18,expanded_covariates,-0.03,0.08,reasonable alternative
+S18,restricted_support,0.07,0.1,support restriction

@@ -1,0 +1,2 @@
+study_id,scenario_id,overall_grade,max_abs_spd,end_pressure,min_rESS,max_tail_share,estimate_range,direction_reversal,dominant_flags
+example_S18,S18,Red,0.95,2.452,0.903,0.027,0.1,TRUE,high_pressure; high_cum_pressure; extreme_signal

@@ -1,0 +1,9 @@
+Domain,Failure mode,Diagnostic symptom,TTE-DR flag,Suggested follow-up action
+Deviation pressure,late surge,SPD(t) increases late in follow-up,high_pressure; high_cum_pressure,Report time-resolved pressure and perform residual sensitivity analysis
+Deviation pressure,threshold jump,Abrupt change in deviation pressure near a risk threshold,threshold_signal,Check deviation-model form and whether the protocol rule induces a threshold artifact
+Deviation pressure,feedback loop,Deviation depends on evolving prognosis or previous adherence behavior,high_pressure; extreme_signal,Clarify dynamic decision process and consider time-updated risk summaries
+Positivity,effective sample-size collapse,Low relative effective sample size during follow-up,positivity_stress,"Inspect support, consider support restriction, and report the target population affected"
+Positivity,upper-tail concentration,Large share of total weight in the upper tail,tail_mass,Inspect weight distribution and compare trimmed or overlap-targeted analyses
+Stability,direction reversal,Qualitative conclusion changes across pre-specified alternatives,specification_instability,Report the full alternative set and avoid a single definitive interpretation
+Stability,wide reasonable-specification range,"Large spread across reasonable horizons, grace periods, or nuisance models",specification_instability,Clarify which target-trial choice drives the conclusion
+Residual sensitivity,small tipping margin,Small residual-bias multiplier changes the qualitative interpretation,sensitivity_tipping,Report sensitivity-based bounds or a cautious discussion statement

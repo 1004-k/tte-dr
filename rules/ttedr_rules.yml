@@ -1,0 +1,24 @@
+pressure:
+  red:
+    condition: "max_abs_spd >= 0.80 or end_pressure >= 2.00"
+    flag: "high_pressure"
+    message: "Protocol deviation appears strongly prognosis-dependent."
+  amber:
+    condition: "max_abs_spd >= 0.50"
+    flag: "moderate_pressure"
+    message: "Protocol deviation shows moderate prognosis dependence."
+positivity:
+  red:
+    condition: "min_rESS < 0.70 or max_tail_share >= 0.10"
+    flag: "positivity_stress"
+    message: "Weight diagnostics indicate limited support."
+stability:
+  red:
+    condition: "direction_reversal == TRUE or estimate_range >= 0.25"
+    flag: "specification_instability"
+    message: "The conclusion changes across reasonable specifications."
+sensitivity:
+  red:
+    condition: "delta_star <= 0.50"
+    flag: "sensitivity_tipping"
+    message: "The primary interpretation tips under a small residual-bias multiplier."

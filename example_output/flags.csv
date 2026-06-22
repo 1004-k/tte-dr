@@ -1,0 +1,4 @@
+flag,module,severity,recommended_action
+high_pressure,pressure,Red,Report time-resolved selection pressure and residual sensitivity.
+high_cum_pressure,pressure,Red,Discuss sustained selective adherence over follow-up.
+extreme_signal,pressure,Red,Avoid a decision-grade point conclusion without further sensitivity analysis.

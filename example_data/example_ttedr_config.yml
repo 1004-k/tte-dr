@@ -1,0 +1,9 @@
+study_id: example_S18
+software_release: v1.0.0
+estimand: per-protocol contrast for sustained adherence
+follow_up_days: 365
+strategy_contrast: sustained treatment strategy versus comparator
+protocol_deviation_rule: illustrative deviation rule used in reference-class simulation
+pressure_threshold_amber: 0.50
+pressure_threshold_red: 0.80
+end_pressure_threshold_red: 2.00
