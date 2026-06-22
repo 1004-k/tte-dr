@@ -48,7 +48,6 @@ docs/                      Quick start, input schema, and failure-mode catalogue
 rules/                     Default rule files and interpretation templates
 paper_outputs/             Manuscript figures and tables, if present
 src/README.md              Notes on source-code layout for SoftwareX
-.github/workflows/         Optional GitHub Actions smoke-test workflow
 LICENSE.txt or LICENSE     MIT license text
 CITATION.cff               Software citation metadata
 DESCRIPTION                R project metadata

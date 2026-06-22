@@ -1,11 +1,15 @@
-Package: ttedr
+Package: TTEDR
 Title: Target Trial Emulation Diagnostic Report Generator
 Version: 1.0.3
-Authors@R: person("Geonwoo", "Kim", email = "geon.woo.kim@stud.ki.se", role = c("aut", "cre"))
-Description: Generates diagnostic quality-assurance reports for per-protocol target trial emulation workflows using synthetic examples and manuscript-facing reporting rules.
-License: MIT + file LICENSE
+Authors@R: person("Geonwoo", "Kim", email = "rjsncr1004@gmail.com", role = c("aut", "cre"))
+Description: Diagnostic quality-assurance reporting workflow for per-protocol target trial emulation in observational studies.
+License: MIT
 Encoding: UTF-8
-Depends: R (>= 4.2.2)
-Imports: data.table, survival, future, future.apply
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
+Depends:
+    R (>= 4.1.0)
+Imports:
+    data.table,
+    jsonlite,
+    yaml

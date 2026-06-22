@@ -1,0 +1,15 @@
+This release contains the SoftwareX submission version of TTE-DR, an R-based diagnostic quality-assurance reporting workflow for per-protocol target trial emulation in observational studies.
+
+This version includes:
+
+* Core R functions for simulation, diagnostic grading, and report generation
+* Synthetic example inputs for reviewer-facing validation
+* A one-command example script: `Rscript scripts/run_ttedr_example.R`
+* A smoke test: `Rscript tests/smoke_test.R`
+* Expected example outputs, including a manuscript-style diagnostic snapshot, CSV summaries, flags, interpretation text, and run metadata
+* Documentation for quick start, input schema, failure-mode catalogue, repository layout, and citation
+* Rule files for diagnostic grading and templated interpretation
+
+TTE-DR is not a new causal estimator. It is a post-estimation reporting layer that converts diagnostic outputs from per-protocol target trial emulation workflows into structured, reproducible, human-readable, and machine-readable reports.
+
+This patch release fixes version metadata in the example configuration, generated run metadata, and citation metadata for the SoftwareX submission archive.
