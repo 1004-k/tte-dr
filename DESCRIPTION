@@ -1,6 +1,6 @@
 Package: ttedr
 Title: Target Trial Emulation Diagnostic Report Generator
-Version: 1.0.0
+Version: 1.0.3
 Authors@R: person("Geonwoo", "Kim", email = "geon.woo.kim@stud.ki.se", role = c("aut", "cre"))
 Description: Generates diagnostic quality-assurance reports for per-protocol target trial emulation workflows using synthetic examples and manuscript-facing reporting rules.
 License: MIT + file LICENSE
